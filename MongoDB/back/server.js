@@ -6,6 +6,7 @@ const userRoutes = require("./routes/userRoutes");
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
+const cors = require("cors");  // Import the cors package
 
   /************************************************************************************************ */
   /************************************************************************************************ */
@@ -21,6 +22,7 @@ connectDB();
 
 // Middleware
 app.use(express.json());
+app.use(cors());  // Enable CORS for all routes
 
 
   /************************************************************************************************ */
